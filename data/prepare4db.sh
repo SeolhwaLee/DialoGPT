@@ -1,0 +1,1 @@
+/efs/dialogpt_data/prepare4db.sh
