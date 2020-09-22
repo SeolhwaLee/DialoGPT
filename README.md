@@ -1,3 +1,24 @@
+# DBDC-WOCHAT script
+```bash
+git clone https://github.com/microsoft/DialoGPT.git
+cd DialoGPT
+conda env create -f LSP-linux.yml -n LSP
+conda activate LSP
+```
+
+```bash
+conda activate LSP
+git clone https://github.com/NVIDIA/apex
+cd apex
+git reset --hard 3d01e4a0a188cc8df54bc6e44cf5eb40ff6b4cc5
+pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" .
+```
+
+For running the script 
+```bash
+sudo python3 interact_dbdc.py --model_name_or_path ./models/medium --load_checkpoint ./models/medium/medium_ft.pkl --top_k 1 --conversation False --eval_input [add/data/script/path.txt]  --eval_output [add/output/result/save/] --gpu 0 --use_gpu --chateval_multi true
+```
+
 # A State-of-the-Art Large-scale Pretrained Response generation model (DialoGPT)
 
 This repository contains the source code and trained model for a large-scale pretrained dialogue response generation model. The [human evaluation results](#human_eval) indicate that the response generated from DialoGPT is comparable to human response quality under a single-turn conversation Turing test.
