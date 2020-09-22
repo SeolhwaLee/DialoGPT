@@ -1,6 +1,6 @@
 # DBDC-WOCHAT script
 ```bash
-git clone https://github.com/microsoft/DialoGPT.git
+git clone https://github.com/sseol11/DialoGPT.git
 cd DialoGPT
 conda env create -f LSP-linux.yml -n LSP
 conda activate LSP
